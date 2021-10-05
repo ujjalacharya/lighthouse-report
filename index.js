@@ -6,8 +6,10 @@ const chromeLauncher = require("chrome-launcher");
 const handler = async (event) => {
   let url = "";
   // console.log({ event });
-    // let argumentName = JSON.parse(process.env.npm_config_argv).original[1];
-  let argumentName = event.url;
+  let argumentName = process.env.url
+  console.log({ argumentName });
+  // let argumentName = event.url;
+
   if (argumentName) {
     // let args = argumentName.split("=");
     // if (args && args[0] === "--url") {
@@ -70,6 +72,7 @@ const handler = async (event) => {
   return;
 };
 
-handler({
-  url: "duckduckgo.com"
-})
+// handler({
+//   url: "duckduckgo.com",
+// });
+handler();

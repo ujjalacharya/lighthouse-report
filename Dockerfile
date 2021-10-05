@@ -1,5 +1,7 @@
 FROM node:14
 
+ENV url=''
+
 # Create app directory
 WORKDIR /usr/src/app
 
