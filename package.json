@@ -1,0 +1,21 @@
+{
+  "name": "lighthouse-report",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "zip": " zip -r lighthouse-report.zip ./",
+    "uploadDemoUse2": "npm run zip && aws lambda update-function-code --region us-east-2 --function-name lighthouse-report --zip-file fileb://.lighthouse-report.zip"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chrome-launcher": "^0.14.0"
+  },
+  "devDependencies": {
+    "lighthouse": "^8.5.1"
+  }
+}
